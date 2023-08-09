@@ -1,14 +1,13 @@
 import Input from "./Input";
 import Button from "./Button";
 import JobList from './JobList'
-import React, {useContext, useReducer, useRef} from "react";
+import React, {useReducer, useRef} from "react";
 import {initialize, reducer} from "./store/reducer";
 import {addJob, setJob} from "./store/actions";
-import {TodoContext} from "../App";
 
 function MyToDo() {
     const inputRef = useRef(null);
-    const [state, dispatch] = useContext(TodoContext)
+    const [state, dispatch] = useReducer(reducer, initialize)
     const handleInputChange = (e) => {
         dispatch(setJob(e.target.value));
     };
