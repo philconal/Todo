@@ -1,8 +1,8 @@
 
-function JobItem() {
+function JobItem({job,onDeleteJob}) {
     return  (
         <>
-        <p>Job 1</p>
+        <p>{job}  <span onClick={onDeleteJob}>X</span></p>
         </>
     )
 

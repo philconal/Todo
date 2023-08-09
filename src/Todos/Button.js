@@ -1,7 +1,7 @@
-function Button () {
+function Button ({onAddJob}) {
     return (
         <>
-            <button>Add Job </button></>
+            <button onClick={onAddJob}>Add Job </button></>
     )
 }
 export default  Button

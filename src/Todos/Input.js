@@ -1,11 +1,10 @@
-function Input() {
-    const handleChange = (e) => {
-            console.log("input Change")
-        }
-    ;
+import React from "react";
+
+function Input({state,inputChange,inputRef}) {
+
     return (
         <>
-            <input type="text" placeholder={"Enter Job Here ..."} value={""} onChange={handleChange}/>
+            <input ref={inputRef} value={state.job} type="text" placeholder={"Enter Job Here ..."} onChange={inputChange}/>
         </>
     )
 }
