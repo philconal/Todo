@@ -1,9 +1,10 @@
-import Input from "./Input";
-import Button from "./Button";
-import JobList from './JobList'
+
 import React, {useReducer, useRef} from "react";
 import {initialize, reducer} from "./store/reducer";
 import {addJob, setJob} from "./store/actions";
+import Input from "./components/Input";
+import Button from "./components/Button";
+import JobList from "./components/JobList";
 
 function MyToDo() {
     const inputRef = useRef(null);
